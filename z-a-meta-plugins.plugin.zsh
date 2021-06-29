@@ -57,7 +57,7 @@ Zinit_Annex_Meta_Plugins_Map=(
     molovo      "molovo/color molovo/revolver molovo/zunit"
 
     # @sharkdp
-    sharkdp     "sharkdp/fd sharkdp/bat sharkdp/hexyl sharkdp/hyperfine sharkdp/vivid"
+    sharkdp     "sharkdp/fd sharkdp/bat sharkdp/hexyl sharkdp/hyperfine sharkdp/vivid sharkdp/diskus"
 
     # Development-related utilities. color and revolver are zunit's
     # dependencies. Tig is being built from source (Git). The gitignore
@@ -85,18 +85,19 @@ Zinit_Annex_Meta_Plugins_Map=(
 
 # The map in which the default sets of ices for the real plugins are being stored.
 typeset -gA Zinit_Annex_Meta_Plugins_Config_Map
-typeset -g _std="lucid"
+typeset -g _std_annex="lucid"
+typeset -g _std="lucid wait"
 Zinit_Annex_Meta_Plugins_Config_Map=(
     # @zinit-zsh (all annexes + extensions, without Meta-Plugins, obviously)
-    zinit-zsh/zinit-console     "$_std"
-    zinit-zsh/z-a-as-monitor    "$_std"
-    zinit-zsh/z-a-patch-dl      "$_std"
-    zinit-zsh/z-a-unscope       "$_std"
-    zinit-zsh/z-a-submods       "$_std"
-    zinit-zsh/z-a-rust          "$_std"
-    zinit-zsh/z-a-bin-gem-node  "$_std"
-    zinit-zsh/z-a-man           "$_std"
-    zinit-zsh/z-a-test          "$_std"
+    zinit-zsh/zinit-console     "$_std_annex"
+    zinit-zsh/z-a-as-monitor    "$_std_annex"
+    zinit-zsh/z-a-patch-dl      "$_std_annex"
+    zinit-zsh/z-a-unscope       "$_std_annex"
+    zinit-zsh/z-a-submods       "$_std_annex"
+    zinit-zsh/z-a-rust          "$_std_annex"
+    zinit-zsh/z-a-bin-gem-node  "$_std_annex"
+    zinit-zsh/z-a-man           "$_std_annex"
+    zinit-zsh/z-a-test          "$_std_annex"
     # @zsh-users
     zsh-users/zsh-autosuggestions       "$_std atload'_zsh_autosuggest_start;'"
     zsh-users/zsh-syntax-highlighting   "$_std atinit'zpcompinit; zpcdreplay;'"
@@ -113,7 +114,7 @@ Zinit_Annex_Meta_Plugins_Config_Map=(
     github-issues           "$_std pack"
     github-issues-srv       "$_std pack atinit'GIT_PROJECTS=zdharma/zinit GIT_SLEEP_TIME=700;'"
     # @molovo
-    molovo/zunit            "$_std binary sbin atclone'./build.zsh;' atpull'%atclone'"
+    molovo/zunit            "$_std binary sbin atclone'./build.zsh;' atpull'%atclone' cp'zunit.zsh-completion -> _zunit'"
     molovo/color            "$_std binary sbin'color.zsh -> color'"
     molovo/revolver         "$_std as'program' pick'revolver'"
     # @zpm-zsh
@@ -123,18 +124,19 @@ Zinit_Annex_Meta_Plugins_Config_Map=(
 
     # @sharkdp
     sharkdp/fd              "$_std binary lucid from'gh-r' mv'fd* fd' sbin'**/fd(.exe|) -> fd'"
-    sharkdp/bat             "$_std binary lucid from'gh-r' mv'bat* bat' sbin'**/bat(.exe|) -> bat'"
+    sharkdp/bat             "$_std binary lucid from'gh-r' mv'bat* bat' sbin'**/bat(.exe|) -> bat' cp'**/autocomplete/bat.zsh -> _bat'"
     sharkdp/hexyl           "$_std binary lucid from'gh-r' mv'hexyl* hexyl' sbin'**/hexyl(.exe|) -> hexyl'"
     sharkdp/hyperfine       "$_std binary lucid from'gh-r' mv'hyperfine* hyperfine' sbin'**/hyperfine(.exe|) -> hyperfine'"
     sharkdp/vivid           "$_std binary lucid from'gh-r' mv'vivid* vivid' sbin'**/vivid(.exe|) -> vivid'"
+    sharkdp/diskus          "$_std binary lucid from'gh-r' mv'diskus* diskus' sbin'**/diskus(.exe|) -> diskus'"
     # @ogham
-    ogham/exa               "$_std binary from'gh-r' sbin'**/exa -> exa'"
+    ogham/exa               "$_std binary from'gh-r' sbin'**/exa -> exa' cp'**/exa.zsh -> _exa'"
     exa-cargo               "$_std binary cargo='!exa' teleid'zdharma/null'"
     # @BurntSushi
     BurntSushi/ripgrep      "$_std binary from'gh-r' mv'rip* ripgrep' sbin'**/rg(.exe|) -> rg'"
 
     # @jonas
-    jonas/tig               "$_std binary make'prefix=$ZPFX install'"
+    jonas/tig               "$_std binary make'prefix=$ZPFX install' cp'**/tig-completion.zsh -> _tig'"
 
     # Fuzzy searchers
     fzf                     "$_std pack'bgn-binary'"
