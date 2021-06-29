@@ -201,7 +201,7 @@ Zinit_Annex_Meta_Plugins_Config_Map+=(
     PZTM::utility       "$_std"
 )
 
-unset _std
+unset _std _std_annex
 
 
 # vim:ft=zsh:tw=80:sw=4:sts=4:et:foldmarker=[[[,]]]
