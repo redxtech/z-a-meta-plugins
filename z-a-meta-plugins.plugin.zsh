@@ -99,10 +99,10 @@ Zinit_Annex_Meta_Plugins_Config_Map=(
     zinit-zsh/z-a-test          "$_std"
     # @zsh-users
     zsh-users/zsh-autosuggestions       "$_std atload'_zsh_autosuggest_start;'"
-    zsh-users/zsh-syntax-highlighting   "$_std atinit'ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay;'"
+    zsh-users/zsh-syntax-highlighting   "$_std atinit'zpcompinit; zpcdreplay;'"
     zsh-users/zsh-completions           "$_std pick'/dev/null'"
     # @zdharma
-    zdharma/fast-syntax-highlighting    "$_std atinit'ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay;'"
+    zdharma/fast-syntax-highlighting    "$_std atinit'zpcompinit; zpcdreplay;'"
     zdharma/history-search-multi-word   "$_std atinit'zstyle :history-search-multi-word page-size 7;'"
     zdharma/zsh-diff-so-fancy           "$_std null sbin'bin/git-dsf;bin/diff-so-fancy'"
     # @zdharma, less popular
