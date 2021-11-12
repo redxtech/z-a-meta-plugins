@@ -3,7 +3,7 @@
 ### **Install groups of plugins via a single, friendly label …**
 ### **… and also have the curated, optimal ice lists automatically applied !**
 
-![screenshot](https://raw.githubusercontent.com/zinit-zsh/z-a-meta-plugins/master/images/fuzzy-mplg-ex.png)
+![screenshot](https://raw.githubusercontent.com/zdharma-continuum/z-a-meta-plugins/master/images/fuzzy-mplg-ex.png)
 
 ## Rationale
 
@@ -32,11 +32,17 @@ Other unique benefits of the Meta-Plugins annex:
 ## The list of the meta-plugins
 
 |Meta-Plugin ID     | Contained sub-plugins |
-|:-----------------:|-----------------------|
-|**annexes**        |[zinit-zsh/z-a-unscope](https://github.com/zinit-zsh/z-a-unscope), [zinit-zsh/z-a-as-monitor](https://github.com/zinit-zsh/z-a-as-monitor), [zinit-zsh/z-a-patch-dl](https://github.com/zinit-zsh/z-a-patch-dl), [zinit-zsh/z-a-rust](https://github.com/zinit-zsh/z-a-rust), [zinit-zsh/z-a-submods](https://github.com/zinit-zsh/z-a-submods), [zinit-zsh/z-a-bin-gem-node](https://github.com/zinit-zsh/z-a-bin-gem-node)                        | 
-|**annexes+con**    |[zinit-zsh/zinit-console](https://github.com/zinit-zsh/zinit-console), annexes (**meta-plugin**)                 |
-|                   |                                                 |
-|**zsh-users**
+|:-----------------:|-----------------------| |**annexes**
+|[zdharma-continuum/z-a-unscope](https://github.com/zdharma-continuum/z-a-unscope),
+[zdharma-continuum/z-a-as-monitor](https://github.com/zdharma-continuum/z-a-as-monitor),
+[zdharma-continuum/z-a-patch-dl](https://github.com/zdharma-continuum/z-a-patch-dl),
+[zdharma-continuum/z-a-rust](https://github.com/zdharma-continuum/z-a-rust),
+[zdharma-continuum/z-a-submods](https://github.com/zdharma-continuum/z-a-submods),
+[zdharma-continuum/z-a-bin-gem-node](https://github.com/zdharma-continuum/z-a-bin-gem-node)
+| |**annexes+con**
+|[zdharma-continuum/zinit-console](https://github.com/zdharma-continuum/zinit-console),
+annexes (**meta-plugin**)
+| |                   |                                                 | |**zsh-users**
 |[zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting),
 [zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions),
 [zsh-users/zsh-completions](https://github.com/zsh-users/zsh-completions)

@@ -40,10 +40,10 @@ autoload -Uz ∧za-meta-plugins-before-load-handler \
 typeset -gA Zinit_Annex_Meta_Plugins_Map
 Zinit_Annex_Meta_Plugins_Map=(
     # Zinit annexes
-    annexes     "zinit-zsh/z-a-unscope zinit-zsh/z-a-as-monitor zinit-zsh/z-a-patch-dl \
-                    zinit-zsh/z-a-rust zinit-zsh/z-a-submods zinit-zsh/z-a-bin-gem-node"
+    annexes     "zdharma-continuum/z-a-unscope zdharma-continuum/z-a-as-monitor zdharma-continuum/z-a-patch-dl \
+                    zdharma-continuum/z-a-rust zdharma-continuum/z-a-submods zdharma-continuum/z-a-bin-gem-node"
     # Annexes + the zinit-console
-    annexes+con "zinit-zsh/zinit-console annexes"
+    annexes+con "zdharma-continuum/zinit-console annexes"
 
     # @zsh-users
     zsh-users   "zsh-users/zsh-syntax-highlighting zsh-users/zsh-autosuggestions zsh-users/zsh-completions"
